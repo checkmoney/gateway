@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       node_args: '--require ./tsconfig-paths-bootstrap.js',
-      name: 'isapp-core',
-      script: '../dist/back/back/src/main.js',
+      name: 'checkmoney-gateway',
+      script: 'dist/src/main.js',
       watch: false,
       instances: 'max',
       exec_mode: 'cluster',
