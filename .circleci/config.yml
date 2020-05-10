@@ -42,8 +42,9 @@ workflows:
           image_name: 'gateway'
           image_version: CIRCLE_TAG
           path_to_app: PATH_TO_APP
-          apply_post_install: false
+          apply_post_install: true
           container_name: 'gateway_app'
+          post_install_script: 'yarn evolutions -y'
           filters:
             tags:
               only: /.*/
