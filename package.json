@@ -12,7 +12,7 @@
     "test": "jest",
     "s": "yarn soda",
     "dev": "NODE_ENV=development nodemon --config ./nodemon.json",
-    "build": "tsc && cp -a ./templates ../dist/back",
+    "build": "tsc && cp -a ./templates ./dist/back",
     "start": "pm2 start ./pm2.config.js"
   },
   "dependencies": {

@@ -17,6 +17,6 @@
       "&shared/*": ["./shared/*"]
     }
   },
-  "include": ["back/src/**/*", "shared/**/*"],
+  "include": ["src/**/*", "shared/**/*"],
   "exclude": ["node_modules/**/*"]
 }
