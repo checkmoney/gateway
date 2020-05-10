@@ -8,7 +8,7 @@ export class DisabledTip {
   @PrimaryColumn()
   public readonly token: string;
 
-  @ManyToOne(type => User, { primary: true })
+  @ManyToOne((type) => User, { primary: true })
   public readonly user: User;
 
   @Column()

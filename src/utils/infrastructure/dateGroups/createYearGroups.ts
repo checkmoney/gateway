@@ -9,7 +9,7 @@ export const createYearGroups = ({ from, to }: DateRange): DateGroup[] => {
 
   const years = range(firstYear, lastYear + 1);
 
-  return years.map(year => ({
+  return years.map((year) => ({
     title: year.toString(),
     from: new Date(`${year}-01-01`),
     to: new Date(`${year + 1}-01-01`),

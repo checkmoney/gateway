@@ -28,12 +28,12 @@ export class MrButcherController {
     ]);
 
     const transactions = [
-      ...incomes.map(income => ({
+      ...incomes.map((income) => ({
         ...income,
         category: income.source,
         amount: `${income.amount}`,
       })),
-      ...outcomes.map(outcome => ({
+      ...outcomes.map((outcome) => ({
         ...outcome,
         amount: `${-outcome.amount}`,
       })),

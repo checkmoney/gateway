@@ -33,10 +33,10 @@ export class ProfileController {
     description: 'Fetching profile success',
     type: ProfileResponse,
   })
-  public async showProfile(@CurrentUser()
-  {
-    login,
-  }: TokenPayloadModel): Promise<ProfileResponse> {
+  public async showProfile(
+    @CurrentUser()
+    { login }: TokenPayloadModel,
+  ): Promise<ProfileResponse> {
     const user = await this.userRepo.getOne(login);
 
     return ProfileResponse.fromProfile(user.profile);

@@ -6,3 +6,4 @@ node_modules
 dist
 *.css.d.ts
 back/.env
+*.hbs

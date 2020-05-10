@@ -55,8 +55,8 @@ export class HistoryController {
       history.map(({ title, incomes, outcomes }) =>
         HistoryGroupResponse.fromPair(
           title,
-          sortBy(incomes, income => sorter(income)),
-          sortBy(outcomes, outcome => sorter(outcome)),
+          sortBy(incomes, (income) => sorter(income)),
+          sortBy(outcomes, (outcome) => sorter(outcome)),
         ),
       ),
     );

@@ -6,7 +6,7 @@ type HandlerDecorator = Decorator & {
   handlers?: Set<any>;
 };
 
-export const IsAdviser: HandlerDecorator = () => target => {
+export const IsAdviser: HandlerDecorator = () => (target) => {
   if (!IsAdviser.handlers) {
     IsAdviser.handlers = new Set();
   }

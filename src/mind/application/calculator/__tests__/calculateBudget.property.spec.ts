@@ -76,7 +76,7 @@ describe('calculateBudget#property', () => {
   test('should return zero for outcome large than income', () => {
     fc.assert(
       fc.property(
-        fc.integer(0, Number.MAX_VALUE).chain(income =>
+        fc.integer(0, Number.MAX_VALUE).chain((income) =>
           moneyArb({
             previousMonthIncome: income,
             thisMonthOutcome: fc.integer(income, Number.MAX_VALUE),

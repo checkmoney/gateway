@@ -16,7 +16,7 @@ export class CustomAdviser implements Adviser {
     const tips = await this.customTipRepo.findActual();
     const now = new Date();
 
-    return tips.map(tip => ({
+    return tips.map((tip) => ({
       action: TipAction.Custom,
       meta: tip,
       token: this.createToken(tip, TipAction.Custom),

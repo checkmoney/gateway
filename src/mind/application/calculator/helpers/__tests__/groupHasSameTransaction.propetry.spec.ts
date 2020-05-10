@@ -71,7 +71,7 @@ describe('groupHasSameTransaction#property', () => {
     fc.assert(
       fc.property(
         daysGapArb(),
-        outcomeArb().chain(outcome =>
+        outcomeArb().chain((outcome) =>
           fc.tuple(fc.constant(outcome), groupWithSameOutcomeArb(outcome)),
         ),
         (daysGap, [outcome, group]) =>

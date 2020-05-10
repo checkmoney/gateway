@@ -22,7 +22,7 @@ export class Income implements AbstractTransaction {
   @Column()
   public source: string;
 
-  @ManyToOne(type => User)
+  @ManyToOne((type) => User)
   public readonly author: User;
 
   public constructor(

@@ -12,14 +12,14 @@ export class AdviserUnity implements Adviser {
   private advisers: Adviser[] = [];
 
   public init(ref: ModuleRef) {
-    this.advisers = Array.from(IsAdviser.handlers || new Set()).map(
-      adviserClass => ref.get(adviserClass, { strict: false }),
-    );
+    this.advisers = Array.from(
+      IsAdviser.handlers || new Set(),
+    ).map((adviserClass) => ref.get(adviserClass, { strict: false }));
   }
 
   public async giveAdvice(userLogin: string): Promise<TipModel[]> {
     const advicesArray = await Promise.all(
-      this.advisers.map(adviser => adviser.giveAdvice(userLogin)),
+      this.advisers.map((adviser) => adviser.giveAdvice(userLogin)),
     );
 
     return flatten(advicesArray);

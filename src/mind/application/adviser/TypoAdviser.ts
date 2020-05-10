@@ -25,13 +25,13 @@ export class TypoAdviser implements Adviser {
     const now = new Date();
 
     return [
-      ...sourceTypos.map(sources => ({
+      ...sourceTypos.map((sources) => ({
         date: now,
         action: TipAction.MergeSources,
         meta: sources,
         token: this.createToken(sources, TipAction.MergeSources),
       })),
-      ...categoryTypos.map(categories => ({
+      ...categoryTypos.map((categories) => ({
         date: now,
         action: TipAction.MergeCategories,
         meta: categories,

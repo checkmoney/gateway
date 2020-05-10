@@ -6,12 +6,14 @@ export const findTypos = (variants: string[]) => {
   const TYPO_THRESHOLD = 0.4;
 
   const pairs = variants
-    .map(original => ({
+    .map((original) => ({
       original,
       bestMatch: tryOr(
         () =>
-          findBestMatch(original, variants.filter(v => v !== original))
-            .bestMatch,
+          findBestMatch(
+            original,
+            variants.filter((v) => v !== original),
+          ).bestMatch,
         undefined,
       ),
     }))
@@ -22,9 +24,9 @@ export const findTypos = (variants: string[]) => {
   // Do not rewrite this with `reduce`, please
   const sameSets: string[][] = [];
 
-  pairs.forEach(pair => {
-    const exist = sameSets.find(same =>
-      pair.some(suggestion => same.includes(suggestion)),
+  pairs.forEach((pair) => {
+    const exist = sameSets.find((same) =>
+      pair.some((suggestion) => same.includes(suggestion)),
     );
 
     if (!exist) {
@@ -38,5 +40,5 @@ export const findTypos = (variants: string[]) => {
   });
 
   // clear duplications
-  return sameSets.map(same => new Set(same));
+  return sameSets.map((same) => new Set(same));
 };

@@ -15,7 +15,7 @@ export class TipsDisabler {
   public async disable(tokens: string[], userLogin: string): Promise<void> {
     const user = await this.userRepo.getOne(userLogin);
 
-    const disabledTips = tokens.map(token => new DisabledTip(token, user));
+    const disabledTips = tokens.map((token) => new DisabledTip(token, user));
 
     await this.entitySaver.save(...disabledTips);
   }

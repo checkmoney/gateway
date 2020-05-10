@@ -38,12 +38,13 @@ export class RecurrentPaymentAdviser implements Adviser {
       previousMonths,
       DAYS_GAP,
     ).filter(
-      transaction => !groupHasSameTransaction(thisMonth, transaction, DAYS_GAP),
+      (transaction) =>
+        !groupHasSameTransaction(thisMonth, transaction, DAYS_GAP),
     );
 
     const now = new Date();
 
-    return recurrentTransactions.map(outcome => ({
+    return recurrentTransactions.map((outcome) => ({
       token: this.createToken(outcome),
       date: now,
       action: TipAction.RecurrentPayment,

@@ -12,12 +12,12 @@ export const findRecurrentTransactions = (
   const now = new Date();
 
   return initialGroup
-    .filter(transaction =>
-      otherGroups.every(group =>
+    .filter((transaction) =>
+      otherGroups.every((group) =>
         groupHasSameTransaction(group, transaction, daysGap),
       ),
     )
-    .filter(transaction => {
+    .filter((transaction) => {
       const transactionDate = getDate(transaction.date);
       const nowDate = getDate(now);
 

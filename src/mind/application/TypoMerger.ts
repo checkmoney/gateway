@@ -46,16 +46,16 @@ export class TypoMerger {
     }
 
     const newIncomes = await Promise.all(
-      incomes.map(async income => {
+      incomes.map(async (income) => {
         const id = await this.idGenerator.getId();
         return income.clone(id);
       }),
     );
-    newIncomes.forEach(income => {
+    newIncomes.forEach((income) => {
       income.source = primary;
     });
 
-    await this.entitySaver.em.transaction(async em => {
+    await this.entitySaver.em.transaction(async (em) => {
       await em.remove(incomes);
       await em.save(newIncomes);
     });
@@ -76,16 +76,16 @@ export class TypoMerger {
     }
 
     const newOutcomes = await Promise.all(
-      outcomes.map(async outcome => {
+      outcomes.map(async (outcome) => {
         const id = await this.idGenerator.getId();
         return outcome.clone(id);
       }),
     );
-    newOutcomes.forEach(outcome => {
+    newOutcomes.forEach((outcome) => {
       outcome.category = primary;
     });
 
-    await this.entitySaver.em.transaction(async em => {
+    await this.entitySaver.em.transaction(async (em) => {
       await em.remove(outcomes);
       await em.save(newOutcomes);
     });

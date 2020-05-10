@@ -23,8 +23,8 @@ export class Historian {
     ]);
 
     return min(
-      income.map(i => i.date).getOrElse(new Date()),
-      outcome.map(o => o.date).getOrElse(new Date()),
+      income.map((i) => i.date).getOrElse(new Date()),
+      outcome.map((o) => o.date).getOrElse(new Date()),
     );
   }
 
@@ -40,7 +40,7 @@ export class Historian {
 
     const groups = createGroups(groupBy)(dateRange);
 
-    return groups.map(group => ({
+    return groups.map((group) => ({
       title: group.title,
       incomes: incomes.filter(rangeFilter(group)),
       outcomes: outcomes.filter(rangeFilter(group)),

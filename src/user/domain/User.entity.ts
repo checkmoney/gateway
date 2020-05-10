@@ -8,7 +8,7 @@ export class User {
   @PrimaryColumn()
   public readonly login: string;
 
-  @Column(type => Profile)
+  @Column((type) => Profile)
   public readonly profile: Profile;
 
   @Column()

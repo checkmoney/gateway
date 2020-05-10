@@ -32,9 +32,11 @@ export class HandlebarsTemplating implements Templating {
       return this.precompiledTemplates[templateName];
     }
 
-    const templateContent = (await promisify(readFile)(
-      resolve(__dirname, '../../../../templates', `${templateName}.hbs`),
-    )).toString();
+    const templateContent = (
+      await promisify(readFile)(
+        resolve(__dirname, '../../../../templates', `${templateName}.hbs`),
+      )
+    ).toString();
 
     const compiled = Handlebars.compile(templateContent);
 

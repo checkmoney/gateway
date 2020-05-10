@@ -7,7 +7,7 @@ export const groupHasSameTransaction = (
   transaction: Outcome,
   daysGap: number,
 ) =>
-  group.some(target => {
+  group.some((target) => {
     const sameAmount = target.amount === transaction.amount;
     const sameCurrency = target.currency === transaction.currency;
     const sameDate =

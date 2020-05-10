@@ -13,10 +13,10 @@ export class DetBellController {
   public constructor(private readonly userRepo: UserRepository) {}
 
   @Get('default-currency')
-  public async fetchDefaultCurrency(@CurrentUser()
-  {
-    login,
-  }: TokenPayloadModel) {
+  public async fetchDefaultCurrency(
+    @CurrentUser()
+    { login }: TokenPayloadModel,
+  ) {
     const defaultCurrency = await this.userRepo.getDefaultCurrency(login);
 
     return defaultCurrency;

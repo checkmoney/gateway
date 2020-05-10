@@ -31,6 +31,6 @@ client.connect().then(() => {
 module.exports = {
   evolutionsFolderPath: ['evolutions'],
   runQuery(query) {
-    return client.query(query).then(result => result.rows);
+    return client.query(query).then((result) => result.rows);
   },
 };

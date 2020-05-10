@@ -14,6 +14,6 @@ export class TipsFilter {
   ): Promise<TipModel[]> {
     const disabledTokens = await this.disabledTipRepo.findTokens(userLogin);
 
-    return tips.filter(tip => !disabledTokens.includes(tip.token));
+    return tips.filter((tip) => !disabledTokens.includes(tip.token));
   }
 }
