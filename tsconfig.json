@@ -4,8 +4,16 @@
     "lib": ["es2017", "dom"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "noLib": false,
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
     "paths": {
-      "&back/*": ["./back/src/*"],
+      "&back/*": ["./src/*"],
       "&shared/*": ["./shared/*"]
     }
   },

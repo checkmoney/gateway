@@ -11,8 +11,7 @@ COPY . .
 
 RUN yarn
 
-WORKDIR /app/back
-RUN yarn prestart:back:prod
+RUN yarn build
 
 EXPOSE 3000
 
