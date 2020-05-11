@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/checkmoney/gateway/compare/v1.0.0...v1.0.1) (2020-05-11)
+
+### Bug Fixes
+
+- **telegram:** move templates to correct dir ([b08c249](https://github.com/checkmoney/gateway/commit/b08c2491e5a9a4333333f5f6977907d41c44ab48))
+
 ## 1.0.0 (2020-05-10)
 
 ### Features
