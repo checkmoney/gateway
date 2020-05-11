@@ -8,7 +8,7 @@
     "circular": "madge --circular --extensions ts ./ --tsConfig tsconfig.json",
     "test": "jest",
     "dev": "NODE_ENV=development nodemon --config ./nodemon.json",
-    "build": "tsc && cp -a ./templates ./dist/back",
+    "build": "tsc && cp -a ./templates ./dist",
     "start": "pm2 start ./pm2.config.js",
     "pretty": "prettier --write .",
     "commit": "git-cz",
