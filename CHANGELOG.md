@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/checkmoney/gateway/compare/v1.1.2...v1.1.3) (2020-07-07)
+
+### Bug Fixes
+
+- add new test and ajust typo threshold ([58c8edf](https://github.com/checkmoney/gateway/commit/58c8edfefdc8fbad50f06d27550198c49c957f73))
+
 ### [1.1.2](https://github.com/checkmoney/gateway/compare/v1.1.1...v1.1.2) (2020-07-07)
 
 ### Bug Fixes
