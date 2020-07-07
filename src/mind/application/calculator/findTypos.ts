@@ -40,5 +40,5 @@ export const findTypos = (variants: string[]) => {
   });
 
   // clear duplications
-  return sameSets.map((same) => new Set(same));
+  return sameSets.map((same) => [...new Set(same)]);
 };

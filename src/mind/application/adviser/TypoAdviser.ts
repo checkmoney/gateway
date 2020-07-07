@@ -40,9 +40,9 @@ export class TypoAdviser implements Adviser {
     ];
   }
 
-  private createToken(variants: Set<string>, action: TipAction): string {
+  private createToken(variants: string[], action: TipAction): string {
     const payload = {
-      variants: Array.from(variants).sort(),
+      variants: variants.sort(),
       action,
     };
 
