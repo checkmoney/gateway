@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/checkmoney/gateway/compare/v1.1.1...v1.1.2) (2020-07-07)
+
+### Bug Fixes
+
+- fix tests ([d6533f4](https://github.com/checkmoney/gateway/commit/d6533f47f774963ce358379a409e0c36847aad4a))
+
 ### [1.1.1](https://github.com/checkmoney/gateway/compare/v1.1.0...v1.1.1) (2020-07-07)
 
 ### Bug Fixes
