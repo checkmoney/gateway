@@ -3,7 +3,7 @@ import { findBestMatch } from 'string-similarity';
 import { tryOr } from '&shared/helpers/tryOr';
 
 export const findTypos = (variants: string[]) => {
-  const TYPO_THRESHOLD = 0.4;
+  const TYPO_THRESHOLD = 0.48;
 
   const pairs = variants
     .map((original) => ({

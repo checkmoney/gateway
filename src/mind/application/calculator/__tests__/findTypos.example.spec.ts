@@ -11,4 +11,11 @@ describe('findTypos#example', () => {
     expect(firstTypo).toContain(first);
     expect(firstTypo).toContain(second);
   });
+
+  test('should not return typo for different words', () => {
+    const variants = ['Apartment', 'Investment'];
+    const typos = findTypos(variants);
+
+    expect(typos).toHaveLength(0);
+  });
 });
