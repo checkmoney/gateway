@@ -36,8 +36,8 @@ describe('findTypos#property', () => {
           const [firstTypoGroup] = typos;
 
           return (
-            firstTypoGroup.has(original) &&
-            firstTypoGroup.has(capitalized) &&
+            firstTypoGroup.includes(original) &&
+            firstTypoGroup.includes(capitalized) &&
             typos.length === 1
           );
         },
