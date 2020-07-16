@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/checkmoney/gateway/compare/v1.1.3...v1.1.4) (2020-07-16)
+
+### Bug Fixes
+
+- **mind:** fix removing author id on typo merge ([840a402](https://github.com/checkmoney/gateway/commit/840a402c2677c6427809516ef33588a2c53d4597))
+
 ### [1.1.3](https://github.com/checkmoney/gateway/compare/v1.1.2...v1.1.3) (2020-07-07)
 
 ### Bug Fixes
