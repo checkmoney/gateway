@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { endOfDay, startOfDay } from 'date-fns';
 import { Option } from 'tsoption';
-import { Repository } from 'typeorm';
+import { Repository, In } from 'typeorm';
 
 import { DateRange } from '&back/utils/infrastructure/dto/DateRange';
 
@@ -120,13 +120,15 @@ class IncomeRepo implements TransactionRepository {
     sources: string[],
     userLogin: string,
   ): Promise<Income[]> {
-    return this.incomeRepo
-      .createQueryBuilder('income')
-      .where('income.source IN (:...sources)', { sources })
-      .innerJoin('income.author', 'author', 'author.login = :userLogin', {
-        userLogin,
-      })
-      .getMany();
+    return this.incomeRepo.find({
+      where: {
+        source: In(sources),
+        author: {
+          login: userLogin,
+        },
+      },
+      relations: ['author'],
+    });
   }
 }
 

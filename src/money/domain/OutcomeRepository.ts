@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { endOfDay, startOfDay } from 'date-fns';
 import { Option } from 'tsoption';
-import { Repository } from 'typeorm';
+import { Repository, In } from 'typeorm';
 
 import { DateRange } from '&back/utils/infrastructure/dto/DateRange';
 
@@ -120,13 +120,15 @@ class OutomeRepo implements TransactionRepository {
     categories: string[],
     userLogin: string,
   ): Promise<Outcome[]> {
-    return this.outcomeRepo
-      .createQueryBuilder('outcome')
-      .where('outcome.category IN (:...categories)', { categories })
-      .innerJoin('outcome.author', 'author', 'author.login = :userLogin', {
-        userLogin,
-      })
-      .getMany();
+    return this.outcomeRepo.find({
+      where: {
+        category: In(categories),
+        author: {
+          login: userLogin,
+        },
+      },
+      relations: ['author'],
+    });
   }
 }
 
