@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/checkmoney/gateway/compare/v1.1.4...v1.2.0) (2020-07-17)
+
+### Features
+
+- **statistics:** add proxy for statitics service ([124f456](https://github.com/checkmoney/gateway/commit/124f456255b9702130d0a7c046470eab6262d59f))
+
 ### [1.1.4](https://github.com/checkmoney/gateway/compare/v1.1.3...v1.1.4) (2020-07-16)
 
 ### Bug Fixes
