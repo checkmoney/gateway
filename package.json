@@ -32,6 +32,7 @@
     "fast-deep-equal": "^2.0.1",
     "google-auth-library": "^5.2.0",
     "handlebars": "^4.1.0",
+    "http-proxy-middleware": "^1.0.5",
     "md5": "^2.2.1",
     "morgan": "^1.9.1",
     "nanoid": "^2.0.1",

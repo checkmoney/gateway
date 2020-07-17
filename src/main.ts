@@ -1,3 +1,4 @@
+/* eslint-disable import/first */
 process.env.TZ = 'UTC';
 
 import { NestFactory } from '@nestjs/core';
@@ -8,6 +9,7 @@ import { setupSwagger } from '&back/addons/setupSwagger';
 import { AppModule } from '&back/app.module';
 
 import { setupTelegram } from './addons/setupTelegram';
+import { setupProxy } from './addons/setupProxy';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -16,6 +18,7 @@ async function bootstrap() {
   setupLogger(app);
   setupSwagger(app, 'docs');
   setupTelegram(app);
+  setupProxy(app);
 
   await app.listen(3000);
 }
